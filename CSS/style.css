@@ -1,0 +1,100 @@
+body {
+    background-color: #9188F8;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+}
+
+.container {
+    background: #260B45;
+    padding: 20px;
+    border-radius: 10px;
+    display: inline-block;
+    margin-top: 50px;
+}
+
+.input-container {
+    position: relative;
+    display: inline-block;
+}
+
+input {
+    padding: 10px;
+    width: 250px;
+    padding-right: 40px;
+     border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+}
+
+.icon {
+    cursor: pointer;
+    font-size: 24px;
+    color: #9188F8;
+}
+
+button {
+    padding: 10px;
+}
+
+.task {
+    background: white;
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    opacity: 0;
+    animation: fadeIn 0.5s forwards; 
+}
+
+.task i:hover {
+    transform: scale(1.2);
+    transition: transform 0.2s ease-in-out;
+}
+
+.task span {
+    flex-grow: 1;
+    font-size: 18px;
+    color: #333;
+}
+
+.task i {
+    font-size: 20px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.ri-edit-box-line.icon {
+    color: #4D8BFF; }
+
+.ri-delete-bin-line.icon {
+    color: #FF6F61; 
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px); 
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+}
+
+.task.deleted {
+    animation: fadeOut 0.5s forwards;
+}
